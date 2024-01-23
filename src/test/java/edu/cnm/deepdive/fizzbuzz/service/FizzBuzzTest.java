@@ -31,8 +31,8 @@ class FizzBuzzTest {
 
   @ParameterizedTest
   @ValueSource(ints = {0, 15, 105, -15})
-  void evaluate_FizzBuzz(int number) {
-    assertEquals("buzz", FizzBuzz.evaluate(number));
+  void evaluate_fizzBuzz(int number) {
+    assertEquals("fizzbuzz", FizzBuzz.evaluate(number));
   }
 }
 

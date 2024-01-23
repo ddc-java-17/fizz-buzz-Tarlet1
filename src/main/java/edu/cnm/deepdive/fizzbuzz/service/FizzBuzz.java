@@ -5,18 +5,26 @@ public class FizzBuzz {
   public static String evaluate(int number) {
     String result = "";
 
-    if (number % 3 == 0) {
-      result += "fizz";
-    }
-
-    if (number % 5 == 0) {
-      result += "buzz";
-
-    }
-    if (result.isEmpty()) {
-      result = String.valueOf(number);
+    int remainder = number % 15;
+    switch (Math.abs(remainder)) {
+      case 0:
+        result = "fizzbuzz";
+        break;
+      case 3:
+      case 6:
+      case 9:
+      case 12:
+        result = "fizz";
+        break;
+      case 5:
+      case 10:
+        result = "buzz";
+        break;
+      default:
+        result = String.valueOf(number);
     }
 
     return result;
   }
+
 }
